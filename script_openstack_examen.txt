@@ -1,0 +1,12 @@
+#!/bin/bash
+apt-get update
+# instalación de servidor web apache
+apt-get install -y apache2
+
+# carga da páxina web
+cd /home/cesgaxuser
+wget https://github.com/bigdatawirtz/escenarios/raw/main/apache-flume/www.tar.gz
+tar xzf www.tar.gz 
+mv www/* /var/www/html/
+
+systemctl restart apache2
