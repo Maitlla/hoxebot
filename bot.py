@@ -6,7 +6,17 @@ from taboas import *
 
 # Authentication to manage the bot
 import os
-TOKEN = '6927166692:AAG-wItvVTyob8IuNa-UqV_jJIN6D6yozEk'
+#from dotenv import load_dotenv
+
+#load_dotenv
+#TOKEN = '6927166692:AAG-wItvVTyob8IuNa-UqV_jJIN6D6yozEk'
+
+TOKEN = os.getenv('TOKEN')
+
+if TOKEN==None:
+    print('lembra indicar a variable TOKEN')
+    print('p.ex: docker run --rm -e TOKEN=o_teu_token nomebot')
+    exit(1)
 
 # Show logs in terminal
 logging.basicConfig(
