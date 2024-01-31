@@ -6,6 +6,8 @@ from taboas import *
 
 # Authentication to manage the bot
 import os
+
+# Mirar lo de dotenv
 #from dotenv import load_dotenv
 
 #load_dotenv
@@ -26,7 +28,7 @@ logging.basicConfig(
 
 # This function responds to start command handler
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    await context.bot.send_message(chat_id=update.effective_chat.id, text="Son un bot, dime algo!")
+    await context.bot.send_message(chat_id=update.effective_chat.id, text="Son un bot, espero que te salga bien el trabajo!")
 
 # This function responds to echo handler
 async def echo(update: Update, context: ContextTypes.DEFAULT_TYPE):
