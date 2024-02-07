@@ -1,18 +1,14 @@
 import logging
 from telegram import Update
 from telegram.ext import filters, MessageHandler, ApplicationBuilder, CommandHandler, ContextTypes
+from dotenv import load_dotenv
 
 from taboas import *
 
 # Authentication to manage the bot
 import os
 
-# Mirar lo de dotenv
-#from dotenv import load_dotenv
-
-#load_dotenv
-#TOKEN = '6927166692:AAG-wItvVTyob8IuNa-UqV_jJIN6D6yozEk'
-
+load_dotenv()
 TOKEN = os.getenv('TOKEN')
 
 if TOKEN==None:
